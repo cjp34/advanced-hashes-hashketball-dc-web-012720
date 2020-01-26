@@ -240,7 +240,7 @@ def most_points_scored
     if points < hash[:home][:players][i][:points]
       points = hash[:home][:players][i][:points]
       name = hash[:home][:players][i][:player_name]
-    elsif big_shoe < hash[:home][:players][i][:points]
+    elsif points < hash[:home][:players][i][:points]
       points = hash[:home][:players][i][:points]
       name = hash[:home][:players][i][:player_name]
     end
