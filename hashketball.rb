@@ -249,14 +249,14 @@ def most_points_scored
 return name
 end
 
-def layer_with_longest_name
+def player_with_longest_name
   hash = game_hash
   long_name = 0
-  big_rebounds = 0
+  name = 0
   i = 0
   while i < hash[:home][:players].length
-    if big_shoe < hash[:home][:players][i][:shoe]
-      big_shoe = hash[:home][:players][i][:shoe]
+    if long_name < hash[:home][:players][i][:shoe].length
+      long_name = hash[:home][:players][i][:shoe]
       big_rebounds = hash[:home][:players][i][:rebounds]
     elsif big_shoe < hash[:away][:players][i][:shoe]
       big_shoe = hash[:away][:players][i][:shoe]
