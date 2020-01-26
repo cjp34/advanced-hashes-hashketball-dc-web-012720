@@ -236,7 +236,7 @@ def most_points_scored
   points = 0
   name = 0
   i = 0
-  while i < hash[:home][:players].length
+  while i < hash[:home][:players][i].length
     if points < hash[:home][:players][i][:points]
       points = hash[:home][:players][i][:points]
       name = hash[:home][:players][i][:player_name]
