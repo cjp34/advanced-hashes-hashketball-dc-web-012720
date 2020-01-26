@@ -255,11 +255,11 @@ def player_with_longest_name
   name = 0
   i = 0
   while i < hash[:home][:players].length
-    if long_name < hash[:home][:players][i][:shoe].length
-      long_name = hash[:home][:players][i][:shoe].length
+    if long_name < hash[:home][:players][i][:player_name].length
+      long_name = hash[:home][:players][i][:player_name].length
       name = hash[:home][:players][i][:name]
-    elsif long_name < hash[:away][:players][i][:shoe].length
-      long_name = hash[:away][:players][i][:shoe].length
+    elsif long_name < hash[:away][:players][i][:player_name].length
+      long_name = hash[:away][:players][i][:player_name].length
       name = hash[:away][:players][i][:name]
     end
   i += 1
