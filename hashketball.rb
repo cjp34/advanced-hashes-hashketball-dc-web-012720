@@ -232,7 +232,22 @@ return big_rebounds
 end
 
 def most_points_scored
-  
+  hash = game_hash
+  points = 0
+  name = 0
+  i = 0
+  while i < hash[:home][:players].length
+    if points < hash[:home][:players][i][:points]
+      points = hash[:home][:players][i][:points]
+      name = hash[:home][:players][i][:player_name]
+    elsif big_shoe < hash[:home][:players][i][:points]
+      points = hash[:home][:players][i][:points]
+      name = hash[:home][:players][i][:player_name]
+    end
+  i += 1
+  end
+return name
+end
 end
 
 
