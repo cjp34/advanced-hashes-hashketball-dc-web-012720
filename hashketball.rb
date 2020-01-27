@@ -302,5 +302,28 @@ def long_name_steals_a_ton
     if most_steals < hash[:home][:players][i][:steals]
       most_steals = hash[:home][:players][i][:steals]
     end
-  while
+  i += 1
+  end
+  i = 0
+  while i < hash[:away][:players].length
+    if most_steals < hash[:away][:players][i][:steals]
+      most_steals = hash[:away][:players][i][:steals]
+    end
+  i += 1
+  end
+  i = 0
+  while i < hash[:home][:players].length
+    if name = hash[:home][:players][i][:player_name]
+      if most_steals = hash[:home][:players][i][:steals]
+        return true
+      end
+    end
+    if name = hash[:away][:players][i][:player_name]
+      if most_steals = hash[:away][:players][i][:steals]
+        return true
+      end
+    end
+  i += 0
+  end
+return false
 end
