@@ -293,7 +293,7 @@ def winning_team
   end
 end
 
-def long_name_steals_a_ton
+def long_name_steals_a_ton?
   hash = game_hash
   name = player_with_longest_name
   i = 0
