@@ -294,3 +294,13 @@ def winning_team
 end
 
 def long_name_steals_a_ton
+  hash = game_hash
+  name = player_with_longest_name
+  i = 0
+  most_steals = 0
+  while i < hash[:home][:players].length
+    if most_steals < hash[:home][:players][i][:steals]
+      most_steals = hash[:home][:players][i][:steals]
+    end
+  while
+end
